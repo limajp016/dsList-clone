@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import br.com.jplima.dslist.GameMinProjection;
 import br.com.jplima.dslist.dtos.GameDTO;
 import br.com.jplima.dslist.dtos.GameMinDTO;
 import br.com.jplima.dslist.entities.Game;
@@ -28,6 +29,12 @@ public class GameService {
 	
 	public List<GameMinDTO> findAll() {
 		List<Game> resultado = gameRepository.findAll();
+		List<GameMinDTO> listaDto = resultado.stream().map(x -> new GameMinDTO(x)).toList();		
+		return listaDto;
+	}
+	
+	public List<GameMinDTO> findByList(Long listId) {
+		List<GameMinProjection> resultado = gameRepository.searchByList(listId);
 		List<GameMinDTO> listaDto = resultado.stream().map(x -> new GameMinDTO(x)).toList();		
 		return listaDto;
 	}
