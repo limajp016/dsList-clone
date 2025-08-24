@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import br.com.jplima.dslist.GameMinProjection;
 import br.com.jplima.dslist.entities.Game;
+import br.com.jplima.dslist.projections.GameMinProjection;
 
 public interface GameRepository extends JpaRepository<Game, Long> {
 	

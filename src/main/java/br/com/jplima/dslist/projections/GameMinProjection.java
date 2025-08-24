@@ -1,4 +1,4 @@
-package br.com.jplima.dslist;
+package br.com.jplima.dslist.projections;
 
 public interface GameMinProjection {
 	

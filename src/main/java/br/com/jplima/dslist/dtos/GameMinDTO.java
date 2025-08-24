@@ -1,7 +1,7 @@
 package br.com.jplima.dslist.dtos;
 
-import br.com.jplima.dslist.GameMinProjection;
 import br.com.jplima.dslist.entities.Game;
+import br.com.jplima.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
